@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const app = require('./app');
 
 
@@ -5,7 +7,7 @@ const app = require('./app');
 
 
 
-const PORT = 12345
+const PORT = process.env.PORT;
 
 
 app.listen(PORT, ()=>{
