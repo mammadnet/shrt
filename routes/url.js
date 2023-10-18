@@ -1,6 +1,13 @@
 const express = require("express");
+const { models } = require("mongoose");
+
+const urlController = require("./../controllers/Url");
 
 const router = express.Router();
+
+
+
+const urlModel = require("./../models/url")
 
 
 
@@ -12,9 +19,6 @@ router.get('/:shorturl', (req, res)=>{
 
 })
 
-router.post("/", (req, res)=>{
-
-    // TODO: get long url from body and response shorturl 
-})
+router.post("/", urlController.getShortUrl)
 
 module.exports = router;
