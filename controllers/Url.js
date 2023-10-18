@@ -5,7 +5,7 @@ const uid = new shortUniqueId({ length: 10 });
 
 const BASE_URL = "http://localhost:12345/";
 
-async function getShortUrl(req, res) {
+async function creatShortUrl(req, res) {
   let query = urlModel.findOne({ longUrl: req.body.longUrl });
   query.select("-__v -urlCode -_id");
 
@@ -36,4 +36,4 @@ async function getShortUrl(req, res) {
   }
 }
 
-module.exports = { getShortUrl };
+module.exports = { creatShortUrl };

@@ -19,6 +19,6 @@ router.get('/:shorturl', (req, res)=>{
 
 })
 
-router.post("/", urlController.getShortUrl)
+router.post("/", urlController.creatShortUrl)
 
 module.exports = router;
