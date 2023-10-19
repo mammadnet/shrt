@@ -1,11 +1,21 @@
 const urlModel = require("./../models/url");
 
+const validUrl = require("valid-url")
+
 const shortUniqueId = require("short-unique-id");
 const uid = new shortUniqueId({ length: 10 });
 
 const BASE_URL = "http://localhost:12345/";
 
 async function creatShortUrl(req, res) {
+
+  if(!validUrl.isUri(req.body.longUrl)){
+    return res.status(400).json({
+      status: 'fail',
+      message:"Bad URL"
+    })
+  }
+
   let query = urlModel.findOne({ longUrl: req.body.longUrl });
   query.select("-__v -urlCode -_id");
 

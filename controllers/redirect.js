@@ -14,7 +14,7 @@ async function redirect(req, res) {
 
   const longUrl = query.longUrl;
 
-  res.redirect(302, "https:/" + longUrl);
+  res.redirect(302, longUrl);
 }
 
 module.exports = redirect;
