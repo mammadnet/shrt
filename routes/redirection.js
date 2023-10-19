@@ -1,4 +1,5 @@
 const urlModel = require("./../models/url");
+const redirect = require("./../controllers/redirect")
 
 
 const express = require("express");
@@ -7,14 +8,7 @@ const express = require("express");
 const router = express.Router();
 
 
-router.get("/:urlCode", async (req, res) => {
-    const urlCode = req.params.urlCode;
-
-    const query = await urlModel.findOne({urlCode})
-    const longUrl = query.longUrl;
-
-    res.redirect(302 ,"https:/" + longUrl)
-})
+router.get("/:urlCode", redirect)
 
 
 module.exports = router;
