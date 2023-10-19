@@ -5,7 +5,7 @@ const validUrl = require("valid-url")
 const shortUniqueId = require("short-unique-id");
 const uid = new shortUniqueId({ length: 10 });
 
-const BASE_URL = "http://localhost:12345/";
+const BASE_URL = process.env.BASE_URL;
 
 async function creatShortUrl(req, res) {
 
