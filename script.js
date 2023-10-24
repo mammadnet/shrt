@@ -9,6 +9,7 @@ const errorDiv = document.querySelector("#error-div");
 const errorMessage = document.querySelector("#error-text");
 const clearButton = document.querySelector("#clear-btn");
 const copyButton = document.querySelector("#copy-btn");
+const mess = document.querySelector("#mess")
 
 /* button action */
 button.addEventListener("click", (event) => {
@@ -71,6 +72,7 @@ function shorten(input) {
       console.log(json);
       shortUrl.innerHTML = json.data.shortUrl;
       showResult();
+      showMess();
     })
     .catch((err) => {
       console.log(err);
@@ -121,4 +123,13 @@ function showError() {
 
 function hideError() {
   errorDiv.style.display = "none";
+}
+
+
+function showMess(){
+  mess.style.display = 'flex';
+  setTimeout(() => {
+    
+    mess.style.display = 'none';
+  }, 8000);
 }

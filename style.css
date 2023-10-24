@@ -45,12 +45,18 @@ main {
 }
 
 #error-div {
+  display: flex;
   width: 80%;
   margin: auto;
   color: #e76f51;
   font-style: italic;
   font-size: 22px;
-  text-align: center;
+  /* text-align: center; */
+  justify-content: center;
+  color: rgb(226, 125, 43);
+  margin: auto;
+  /* padding: 10px; */
+  /* align-items: center; */
 }
 
 .content-row {
@@ -95,4 +101,20 @@ input[type=text] {
   font-size: 18px;
   display: flex;
 
+}
+
+#mess{
+  display: none;
+  /* flex-direction: row; */
+  width: 80%;
+  justify-content: center;
+  /* background-color: #e9c46a; */
+  color: rgb(226, 125, 43);
+  margin: auto;
+  padding: 10px;
+  /* border: 3px solid #e9c46a; */
+  border-radius: 10px;
+  align-items: center;
+  margin-bottom: 100px;
+  
 }
