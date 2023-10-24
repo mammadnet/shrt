@@ -1,4 +1,4 @@
-const baseURL = "http://127.0.0.1:12345";
+const baseURL = "https://shrt.iran.liara.run";
 
 const button = document.querySelector("#shorten");
 const input = document.querySelector("#input-field");
