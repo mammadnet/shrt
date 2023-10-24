@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortener</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main>
+    <div id="header-div" class="">
+       <h1 class="">Link Shortener</h1>
+     </div>
+     <!-- link input and shorten button -->
+     <div id="content-div">
+       <div id="input-div">
+         <input type="text" class="text-field content-row" placeholder="Enter URL here . . ." id="input-field" required/>
+         <button id="shorten" type="button" class="content-row button">Shorten URL</button>
+         <button type="button" id="clear-btn" class="content-row button">Clear</button>
+       </div>
+       <!-- Output and copy -->
+       <div id="output-div">
+         <div class="content-row" id="new-url-label">Your short URL:</div>
+         <div id="new-url" class="content-row"></div>
+         <button type="button" id="copy-btn" data-clipboard-target="#new-url" class="content-row button">Copy</button>
+       </div>
+       <div class="" id="error-div">
+          <p class="content-row" id="error-text"></p>
+       </div>
+     </div>
+
+     </main>
+     <!--App script-->
+     <script src="./script.js"></script>
+
+     </body>
+</html>
